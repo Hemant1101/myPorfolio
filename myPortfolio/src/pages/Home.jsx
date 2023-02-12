@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../utilities/Button'
 
 const Home = () => {
   return (
@@ -8,13 +7,13 @@ const Home = () => {
             <h1>Hi, my name is</h1>
           </div>
           <div style={{transitionDelay : "200ms"}}>
-            <h2 className="big-heading">Hemant Kumar</h2>
+            <h2 className="big-heading">Hemant,</h2>
           </div>
           <div style={{transitionDelay : "300ms"}}>
             <h3 className="big-heading">I build things to learn while having fun.</h3>
           </div>
           <div style={{transitionDelay : "400ms"}}>
-            <p>I am an aspiring engineer and enthusiastic programmer. I'm from India and a Computer science engineering student. I just love to learn new things and explore different areas.I work with Python, React for frontend and am versed working with relational databases.
+            <p>I am an aspiring engineer and enthusiastic programmer. I'm from India and a Computer science engineering student. I like to work with Python (mostly) and React for frontend. I am also well versed in working with relational databases.
             </p>
           </div>
           <div style={{transitionDelay : "500ms"}}>

@@ -3,6 +3,7 @@ import MobileMenu from './MobileMenu'
 import MenuList from './MenuList'
 import useWindowSize from '../hooks/useWindowSize'
 import useScrollDirection from '../hooks/useScrollDirection'
+import { ReactComponent as Logo } from '../assets/logo.svg'
 
 const NavBar = () => {
 
@@ -26,7 +27,7 @@ const NavBar = () => {
     <header className={` ${scrollDirection === "down" ? "headerHide" : "headerShow" }`}>
     <nav className="navbar">
       <div className="logo">
-        <a href="/#">logo</a>
+        <a href="/#"><Logo /></a>
       </div>
       { isMobile ? <MobileMenu /> : <MenuList />}
         

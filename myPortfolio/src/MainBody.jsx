@@ -4,10 +4,12 @@ import Footer from './pages/Footer'
 
 const MainBody = () => {
   return (
+    <>
     <main className="fillHeight">
         <Home/>
-        <Footer />
     </main>
+    <Footer />
+    </>
   )
 }
 
