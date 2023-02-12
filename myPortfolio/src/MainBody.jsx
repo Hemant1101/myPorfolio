@@ -4,7 +4,7 @@ import Footer from './pages/Footer'
 
 const MainBody = () => {
   return (
-    <main>
+    <main className="fillHeight">
         <Home/>
         <Footer />
     </main>

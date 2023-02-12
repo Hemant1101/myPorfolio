@@ -2,39 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap');
 
-/* for all elements */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html{
-  width: 100%;
-  scroll-behavior: smooth;
-}
-:focus{
-  outline: 2px dashed var(--green);
-  outline-offset: 3px;
-}
-:focus-visible{
-  outline: 2px dashed var(--green);
-  outline-offset: 3px;
-}
-:focus:not(:focus-visible){
-  outline: none;
-  outline-offset: 0px;
-}
-a{
-  display: inline-block;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  color: inherit;
-  position: relative;
-  transition: var(--transition);
-}
-a:hover, a:focus{
-  color: var(--green);
-}
 /* root variables */
 :root {
   --dark-navy: #020c1b;
@@ -73,7 +40,53 @@ a:hover, a:focus{
   --ham-before-active: top 0.1s ease-out,opacity 0.1s ease-out 0.12s;
   --ham-after: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
   --ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
+}
 
+/* for all elements */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  width: 100%;
+  scroll-behavior: smooth;
+}
+:focus{
+  outline: 2px dashed var(--green);
+  outline-offset: 3px;
+}
+:focus-visible{
+  outline: 2px dashed var(--green);
+  outline-offset: 3px;
+}
+:focus:not(:focus-visible){
+  outline: none;
+  outline-offset: 0px;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: var(--transition);
+}
+a:hover, a:focus{
+  color: var(--green);
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px 0px 10px;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  line-height: 1.1;
+}
+p{
+  margin:0 0 15px;
+  max-width: 540px;
+}
+p:last-child, p:last-of-type{
+  margin: 0;
 }
 
 /* background */
@@ -158,9 +171,62 @@ main{
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  padding: 200px 150px;
+  padding: 10px 150px;
+  counter-reset: section 0;
+}
+main.filHeight{
+  padding: 0 150px;
+}
+section{
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1000px;
 }
 
+/* home */
+.Home{
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  padding: 0px;
+}
+.Home h1{
+  margin: 0 0 30px 4px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-sm),5vw,var(--fx-md));
+  font-weight: 400;
+}
+.big-heading{
+  margin: 0;
+  font-size: clamp(40px, 8vw, 80px);
+}
+.Home h3{
+  margin-top: 5px;
+  color: var(--slate);
+  line-height: 0.9;
+}
+.Home p{
+  margin: 20px 0 0;
+}
+.Home .button{
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: var(--border-radius);
+  padding: var(--fz-sm);
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 50px;
+}
 /* footer  */
 .footer{
   display: flex;
@@ -202,6 +268,9 @@ main{
   main{
     padding: 200px 100px;
   }
+  main.filHeight{
+    padding: 0 100px;
+  }
 
 }
 
@@ -213,6 +282,12 @@ main{
   /* mainbody */
   main{
     padding: 150px 50px;
+  }
+  main.filHeight{
+    padding: 0 50px;
+  }
+  section{
+    padding: 80px 0;
   }
 }
 
