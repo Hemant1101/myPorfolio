@@ -29,7 +29,6 @@ const NavBar = () => {
         <a href="/#">logo</a>
       </div>
       { isMobile ? <MobileMenu /> : <MenuList />}
-      <div>{`${windowSize.width}`}</div>
         
     </nav>
     </header>
