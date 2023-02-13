@@ -27,7 +27,7 @@
   --fz-lg: 18px;
   --fz-xl: 20px;
   --fz-xxl: 22px;
-  --fz-heading: 32px;
+  --fz-heading: 28px;
   --border-radius: 4px;
   --nav-height: 100px;
   --nav-scroll-height: 70px;
@@ -111,6 +111,11 @@ body{
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
   line-height: 1.3;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* scrollbar */
@@ -426,6 +431,48 @@ body.blur main > *, body.blur footer > * {
   user-select: none;
 }
 
+/* leftbar */
+.leftbar{
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  color: var(--light-slate);
+}
+.social-icon-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.leftbar .social-icon-list li:last-of-type{
+  margin-bottom: 20px;
+}
+.social-icon-list li a{
+  padding: 10px;
+}
+.social-icon-list li a:hover, .social-icon-list li a:focus{
+  transform: translateY(-3px);
+}
+.social-icon-list::after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0 auto;
+  background-color: var(--light-slate);
+}
+.social-icon-list li a svg{
+  width: 20px;
+  height: 20px;
+}
+svg.feather{
+  fill: none;
+}
 /* mainbody */
 main{
   margin: 0 auto;
@@ -453,7 +500,7 @@ section{
   align-items: flex-start;
   flex-direction: column;
   min-height: 100vh;
-  height: 100vh;
+  height: auto;
   padding: 0px;
 }
 .Home h1{
@@ -499,6 +546,78 @@ section{
   box-shadow: 0 0 2px var(--green), 0 0 5px var(--green),0 0 3px var(--green) inset;
 }
 
+/* about */
+#about{
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+.about{
+  max-width: 900px;
+}
+.numbered-heading{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: baseline;
+  position: relative;
+  margin: 10px 0 40px;
+  width: 100%;
+  font-size: clamp(26px,4vw,var(--fz-heading));
+  white-space: nowrap;
+  line-height: 1.3;
+}
+.numbered-heading::before{
+  position: relative;
+  bottom: 4px;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-md),3vw,var(--fz-xl));
+  font-weight: 400;
+}
+.numbered-heading::after{
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
+}
+.about .inner{
+  display: grid;
+  grid-template: 3fr 2fr;
+  gap: 50px;
+}
+.about ul.skill-list{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(140px,200px));
+  gap: 0 10px;
+  padding: 0;
+  margin: 20px 0 0;
+  overflow: hidden;
+  list-style: none;
+}
+.about ul.skill-list li{
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+.about ul.skill-list li::before{
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-size: var(--fz-sm);
+  line-height: 12px;
+
+}
 /* footer  */
 .footer{
   display: flex;
@@ -511,6 +630,20 @@ section{
   min-height: 70px;
   padding: 15px;
   text-align: center;
+}
+.footer-socialicon-container{
+  display: none;
+  width: 100%;
+  max-width: max-content;
+  margin: 0 auto 10px;
+  color: var(--light-slate);
+}
+.footer-socialicon-container ul.social-icon-list{
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer-socialicon-container ul.social-icon-list::after{
+  display: none;
 }
 .endingRemarks{
   color: var(--light-slate);
@@ -543,7 +676,11 @@ section{
   main.filHeight{
     padding: 0 100px;
   }
-
+  /* leftbar  */
+  .leftbar{
+    left: 20px;
+    right: auto;
+  }
 }
 
 @media (max-width: 768px){
@@ -553,7 +690,7 @@ section{
   }
   /* mainbody */
   main{
-    padding: 150px 50px;
+    padding: 200px 50px;
   }
   main.filHeight{
     padding: 0 50px;
@@ -561,6 +698,22 @@ section{
   section{
     padding: 80px 0;
   }
+  /* about  */
+  .about .inner{
+    display: block;
+  }
+  /* leftbar  */
+  .leftbar{
+    display: none;
+  }
+  /* footer  */
+  .footer-socialicon-container{
+    display: block;
+  }
 }
-
-
+@media (max-height: 700px) and (min-width: 700px), (max-width: 360px){
+  .Home{
+    height: auto;
+    padding-top: 10px;
+  }
+}

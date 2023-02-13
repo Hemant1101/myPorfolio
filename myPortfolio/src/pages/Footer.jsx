@@ -5,7 +5,9 @@ import GithubStats from '../components/GithubStats'
 const Footer = () => {
   return (
       <footer className="footer">
-          <SocialIcons />
+          <div className="footer-socialicon-container">
+            <SocialIcons />
+          </div>
           <div className="endingRemarks">
               <a href="#githubrepolink" rel="noopener noreferrer" target="_blank">
                   <div>Built by Hemant Kumar & UI Design inspired by Brittany Chiang</div>
