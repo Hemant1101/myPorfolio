@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = () => {
+const Button = (props) => {
   return (
-    <div>Button</div>
+    <a className={props.classname} href={props.href} rel={props.rel} target={props.target}>{`${props.children}`}</a>
   )
 }
 

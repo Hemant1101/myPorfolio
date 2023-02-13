@@ -106,6 +106,7 @@ body{
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   background-color: var(--navy);
+  background: linear-gradient(90deg,var(--dark-navy),var(--navy),var(--light-navy));
   color: var(--slate);
   font-family: var(--font-sans);
   font-size: var(--fz-xl);
@@ -142,7 +143,8 @@ body{
   padding: 0 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: #0a192fd9;
+  background-color: var(--navy);
+  background: linear-gradient(90deg,var(--dark-navy),var(--navy),var(--light-navy));;
   backdrop-filter: blur(10px);
   transition: var(--transition);
   filter: none !important;
@@ -188,6 +190,55 @@ body{
   color: var(--green);
 }
 
+.menulist{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.menulist ol{
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menulist ol li{
+  margin: 0 5px;
+  position: relative;
+  counter-increment: item 1;
+  font-size: var(--fz-xs);
+}
+.menulist ol li a{
+  padding: 10px;
+}
+.menulist ol li a::before{
+  content: "0" counter(item) ".";
+  margin-right: 5px;
+  color: var(--green);
+  font-size: var(--fz-xxs);
+  text-align: right;
+}
+.menulist .resume-button{
+  color: var(--green);
+  background-color: transparent;
+  border:1px solid var(--green);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left:15px;
+  font-size: var(--fz-xs);
+}
+.menulist .resume-button:hover, .menulist .resume-button:focus, .menulist .resume-button:active{
+  background-color: var(--green-tint);
+  outline: none;
+}
 /* mainbody */
 main{
   margin: 0 auto;
@@ -249,6 +300,16 @@ section{
   cursor: pointer;
   transition: var(--transition);
   margin-top: 50px;
+}
+.Home .button:hover{
+  color: #fff;
+  text-shadow:
+    0 0 3px var(--green),
+    0 0 7px var(--green),
+    0 0 15px var(--green);
+  border-color: #fff;
+  border-width: 1px;
+  box-shadow: 0 0 2px var(--green), 0 0 5px var(--green),0 0 3px var(--green) inset;
 }
 
 /* footer  */
