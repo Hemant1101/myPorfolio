@@ -5,13 +5,13 @@ import About from './pages/About'
 
 const MainBody = () => {
   return (
-    <>
+    <div>
     <main className="fillHeight">
         <Home/>
         <About />
     </main>
     <Footer />
-    </>
+    </div>
   )
 }
 
