@@ -351,11 +351,13 @@ body{
 .mobile-menu-container.aside-closed{
   transform: translateX(100vw);
   visibility: hidden;
+  display: none;
 }
 .mobile-menu-container.aside-open{
   transform: translateX(0vw);
   visibility: visible;
   backdrop-filter: blur(8px);
+  display: block;
 }
 .mobile-menu-container nav{
   display: flex;
@@ -701,7 +703,7 @@ section{
   }
   /* mainbody */
   main{
-    padding: 200px 50px;
+    padding: 100px 50px;
   }
   main.filHeight{
     padding: 0 50px;

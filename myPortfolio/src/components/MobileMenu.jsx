@@ -31,7 +31,7 @@ const MobileMenu = () => {
           <ol>
             {menuItems.map((values)=>{
               return (
-                <li key={values.id}>
+                <li key={values.id} onClick={handleHamClick}>
                   <a href={values.href}>
                     {`${values.name}`}
                   </a>
