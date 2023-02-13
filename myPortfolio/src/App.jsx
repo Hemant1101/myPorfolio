@@ -1,14 +1,14 @@
 import './App.css'
 import MainBody from './MainBody'
 import NavBar from './components/NavBar'
-import SocialIcons from './components/SocialIcons'
+import LeftBar from './components/LeftBar'
 
 function App() {
 
   return (
     <div className="App">
       <NavBar />
-      <SocialIcons />
+      <LeftBar />
       <MainBody />
     </div>
   )
