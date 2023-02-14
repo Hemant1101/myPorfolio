@@ -10,7 +10,7 @@ export const menuItems = [
   {
     id : 2,
     name : "Work",
-    href : "/#work"
+    href : "/#projects"
   },
   {
     id : 3,
