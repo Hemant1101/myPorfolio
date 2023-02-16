@@ -20,7 +20,7 @@ const Projects = () => {
                             <div>
                                 <p className="project-overline">Featured Project</p>
                                 <h3 className="project-title">
-                                    <a href={project.link} rel="noopener noreferrer" target="_blank">{`${project.project_name}`}</a>
+                                    <a href={project.link} rel="noopener noreferrer">{`${project.project_name}`}</a>
                                 </h3>
                                 <div className="project-description">
                                     <p>
