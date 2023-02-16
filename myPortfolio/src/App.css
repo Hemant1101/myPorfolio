@@ -154,7 +154,7 @@ body{
   width: 100%;
   height: var(--nav-height);
   background-color: var(--navy);
-  background: linear-gradient(90deg,var(--dark-navy),var(--navy),var(--light-navy));;
+  background-image: linear-gradient(90deg,var(--dark-navy),var(--navy),var(--light-navy));;
   backdrop-filter: blur(10px);
   transition: var(--transition);
   filter: none !important;
@@ -469,7 +469,7 @@ body.blur main > *, body.blur footer > * {
   content: "";
   display: block;
   width: 1px;
-  height: 90px;
+  height: 150px;
   margin: 0 auto;
   background-color: var(--light-slate);
 }
@@ -977,6 +977,51 @@ img[alt=""],img:not([alt]){
 .archived_project-item .project-tech-list li:not(:last-of-type){
   margin-right: 15px;
 }
+.contact{
+  max-width: 600px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+.contact .overline{
+  display: block;
+  margin-bottom: 20px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-md);
+  font-weight: 400;
+}
+.overline::before{
+  bottom: 0;
+  font-size: var(--fz-sm);
+}
+.overline::after{
+  display: none;
+}
+.contact .title{
+  font-size: clamp(35px,5vw,55px);
+}
+.contact p{
+  max-width: 100%;
+  font-size: var(--fz-xl);
+  margin-top: 35px;
+}
+.contact .email-link{
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: var(--border-radius);
+  padding: 1.15rem 1.75rem;
+  font-size: var(--fz-sm);
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 50px;
+}
+.contact .email-link:hover{
+  background-color: var(--green-tint);
+}
 
 /* footer  */
 .footer{
@@ -1124,6 +1169,10 @@ img[alt=""],img:not([alt]){
     width: auto;
     height: 100%;
     filter: grayscale(100%) contrast(1) brightness(50%);
+  }
+  /* contact */
+  .contact{
+    margin: 0 auto 100px;
   }
   /* footer  */
   .footer-socialicon-container{

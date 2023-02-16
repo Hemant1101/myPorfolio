@@ -9,9 +9,8 @@ const Footer = () => {
             <SocialIcons />
           </div>
           <div className="endingRemarks">
-              <a href="#githubrepolink" rel="noopener noreferrer" target="_blank">
+              <a href="https://github.com/Hemant1101/myPorfolio" rel="noopener noreferrer" target="_blank">
                   <div>Built by Hemant Kumar & UI Design inspired by Brittany Chiang</div>
-                  <GithubStats />
               </a>
           </div>
       </footer>

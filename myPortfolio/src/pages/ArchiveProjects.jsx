@@ -1,35 +1,6 @@
 import React from 'react'
 import {ReactComponent as GithubLogo} from '../assets/github.svg'
-
-const ArchivedProjectsArray = [
-    {
-        id : 1,
-        name : "proj",
-        githublink : "https://www.github.com/",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, esse.",
-        techStack : [{id:1,name:"html"},{id:2,name:"css"}]
-    },
-    {
-        id : 2,
-        name : "proj",
-        githublink : "https://www.github.com/",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, esse.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, esse.",
-        techStack : [{id:1,name:"html"},{id:2,name:"css"}]
-    },
-    {
-        id : 3,
-        name : "proj",
-        githublink : "https://www.github.com/",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, esse.",
-        techStack : [{id:1,name:"html"},{id:2,name:"css"}]
-    },{
-        id : 4,
-        name : "proj",
-        githublink : "https://www.github.com/",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, esse.",
-        techStack : [{id:1,name:"html"},{id:2,name:"css"}]
-    },
-]
+import ArchivedProjectsArray from '../data/archivedProjectsData'
 
 const ArchiveProjects = () => {
   return (
