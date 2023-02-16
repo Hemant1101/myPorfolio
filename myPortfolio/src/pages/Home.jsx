@@ -17,7 +17,7 @@ const Home = () => {
             </p>
           </div>
           <div style={{transitionDelay : "500ms"}}>
-            <a className="button" href="/#projects" target="_blank" rel="noreferrer">Check Out my works!</a>
+            <a className="button" href="/#projects" rel="noreferrer">Check Out my works!</a>
           </div>
       </section>
   )
